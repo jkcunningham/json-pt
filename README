@@ -1,0 +1,36 @@
+JSON-PT is a simple Common Lisp package for interacting with JSON
+interchange format data. It consists of a decoder, an encoder and some
+tests which demonstrate usage.
+
+This package has no dependencies. 
+
+There are several excellent JSON utilities around for Common Lisp
+(see, CL-JSON and especially YASON).  I wrote this because I found the
+other packages a little more difficult than I liked for representing
+the structures as simple s-expressions (p-list trees). It is very
+simple to use.
+
+The file test-json.lisp contains a series of tests/examples. (Note:
+the names, addresses, phone numbers, ccard numbers, etc. were randomly
+generated, so don't get excited. See my FAKER package for details.)
+
+Since this is all there is in the way of documentation, I'll mention
+that setting *json-pprint* true will write the JSON output with
+linefeeds and indentation which is nice if you actually need to read
+one. Setting *json-debug* true writes out grotesque amounts of
+information useful for debugging.
+
+I think I've covered all the cases at http://json.org, but I stopped
+worring about it once my use-case was covered.
+
+Email me if you find any bugs, or better yet send me a pull-request
+with the fix.
+
+Jeff Cunningham <jeffrey@jkcunningham.com>
+6/2012
+
+
+
+
+
+

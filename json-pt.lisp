@@ -73,6 +73,8 @@ pretty-print structure if *JSON-PPRINT* is true. Redirect
          (princ "[]")) ;; <=== might want null here instead
         ((stringp pl)
          (prin1 pl))
+        ((numberp pl)
+         (princ pl))
         ((atom pl)
          (prin1 (write-to-string pl)))
         ((plist-p pl)
